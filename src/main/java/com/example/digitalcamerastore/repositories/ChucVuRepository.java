@@ -6,7 +6,7 @@
 
 package com.example.digitalcamerastore.repositories;
 
-import com.example.digitalcamerastore.entities.Role;
+import com.example.digitalcamerastore.entities.ChucVu;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +17,6 @@ import org.springframework.stereotype.Repository;
  * @created: 26-November-2024 4:09 PM
  */
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Integer> {
-    public Role findByName(String name);
+public interface ChucVuRepository extends JpaRepository<ChucVu, Integer> {
+    public ChucVu findByTenChucVu(String name);
 }

@@ -7,12 +7,9 @@
 package com.example.digitalcamerastore.repositories;
 
 
-import com.example.digitalcamerastore.entities.User;
-import jdk.jfr.Registered;
+import com.example.digitalcamerastore.entities.NhanVien;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 /*
  * @description
@@ -21,8 +18,8 @@ import java.util.List;
  * @created: 26-November-2024 3:21 PM
  */
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
-    public User findByEmail(String email);
+public interface NhanVienRepository extends JpaRepository<NhanVien, Integer> {
+    public NhanVien findByTaiKhoan_TenDangNhap(String tenDangNhap);
 }
 
     

@@ -9,13 +9,11 @@ package com.example.digitalcamerastore.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 /*
  * @description
  * @author: Tran Tan Dat
  * @version: 1.0
- * @created: 26-November-2024 4:03 PM
+ * @created: 26-November-2024 9:33 PM
  */
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,12 +21,16 @@ import java.util.List;
 @Setter
 @ToString
 @Entity
-@Table(name = "role")
-public class Role {
+@Table(name = "khach_hang")
+public class KhachHang {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String name;
-    @ManyToMany(mappedBy = "roles")
-    private List<User> users;
+    private int maKhachHang;
+    private String tenKhachHang;
+    private String diaChi;
+    private String soDienThoai;
+    private String email;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "maTaiKhoan", referencedColumnName = "maTaiKhoan")
+    private TaiKhoan taiKhoan;
 }
