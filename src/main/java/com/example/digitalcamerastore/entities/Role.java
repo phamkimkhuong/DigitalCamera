@@ -1,5 +1,5 @@
 /*
- * @(#) $(NAME).java    1.0     11/26/2024
+ * @(#) $(NAME).java    1.0     11/27/2024
  *
  * Copyright (c) 2024 IUH. All rights reserved.
  */
@@ -8,6 +8,7 @@ package com.example.digitalcamerastore.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -15,19 +16,22 @@ import java.util.List;
  * @description
  * @author: Tran Tan Dat
  * @version: 1.0
- * @created: 26-November-2024 4:03 PM
+ * @created: 27-November-2024 2:56 PM
  */
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 @Entity
-@Table(name = "chuc_vu")
-public class ChucVu {
+@Table(name = "role")
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int maChucVu;
-    private String tenChucVu;
-    @ManyToMany(mappedBy = "dsChucVu")
-    private List<NhanVien> dsNhanVien;
+    private int id;
+    @Column(nullable = false, unique = true)
+    private String name;
+    @ManyToMany(mappedBy = "roles")
+    private List<Employee> users;
+
 }
