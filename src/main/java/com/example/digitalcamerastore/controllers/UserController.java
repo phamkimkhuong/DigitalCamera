@@ -6,8 +6,8 @@
 
 package com.example.digitalcamerastore.controllers;
 
-import com.example.digitalcamerastore.dtos.EmployeeDTO;
-import com.example.digitalcamerastore.services.EmployeeService;
+import com.example.digitalcamerastore.dtos.UserDTO;
+import com.example.digitalcamerastore.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -27,22 +27,22 @@ import java.util.Map;
  * @created: 27-November-2024 2:37 PM
  */
 @RepositoryRestController
-public class EmployeeController {
+public class UserController {
 
     @Autowired
-    private EmployeeService employeeService;
+    private UserService userService;
 
-    @GetMapping("/employees/{id}")
-    public ResponseEntity<Map<String, Object>> getEmployeeById(@PathVariable int id) {
+    @GetMapping("/user/{id}")
+    public ResponseEntity<Map<String, Object>> getUserById(@PathVariable int id) {
         Map<String, Object> response = new LinkedHashMap<String, Object>();
         response.put("status", HttpStatus.OK.value());
-        response.put("data", employeeService.findById(id));
+        response.put("data", userService.findById(id));
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
-    @PostMapping("/employees")
-    public ResponseEntity<Map<String, Object>> saveEmployee(
-            @Valid @RequestBody EmployeeDTO employeeDTO,
+    @PostMapping("/user")
+    public ResponseEntity<Map<String, Object>> saveUser(
+            @Valid @RequestBody UserDTO userDTO,
             BindingResult bindingResult) {
         Map<String, Object> response = new LinkedHashMap<String, Object>();
 
@@ -60,14 +60,14 @@ public class EmployeeController {
         }
         else {
             response.put("status", HttpStatus.OK.value());
-            response.put("data", employeeService.save(employeeDTO));
+            response.put("data", userService.save(userDTO));
             return ResponseEntity.status(HttpStatus.OK).body(response);
         }
 
     }
 
-    @PutMapping("/employees/{id}")
-    public ResponseEntity<Map<String, Object>> updateEmployee(@PathVariable int id, @Valid @RequestBody EmployeeDTO employeeDTO, BindingResult bindingResult) {
+    @PutMapping("/user/{id}")
+    public ResponseEntity<Map<String, Object>> updateUser(@PathVariable int id, @Valid @RequestBody UserDTO userDTO, BindingResult bindingResult) {
 
         Map<String, Object> response = new LinkedHashMap<String, Object>();
 
@@ -83,45 +83,45 @@ public class EmployeeController {
         }
         else {
             response.put("status", HttpStatus.OK.value());
-            response.put("data", employeeService.update(id, employeeDTO));
+            response.put("data", userService.update(id, userDTO));
             return ResponseEntity.status(HttpStatus.OK).body(response);
         }
     }
 
-    @DeleteMapping("/employees/{id}")
-    public ResponseEntity<Map<String, Object>> deleteEmployee(@PathVariable int id) {
+    @DeleteMapping("/user/{id}")
+    public ResponseEntity<Map<String, Object>> deleteUser(@PathVariable int id) {
         Map<String, Object> response = new LinkedHashMap<String, Object>();
         response.put("status", HttpStatus.OK.value());
-        response.put("data", employeeService.delete(id));
+        response.put("data", userService.delete(id));
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
-    @GetMapping("/employees")
-    public ResponseEntity<Map<String, Object>> getEmployees(@RequestParam(required = false) String keyword) {
+    @GetMapping("/users")
+    public ResponseEntity<Map<String, Object>> getUsers(@RequestParam(required = false) String keyword) {
 
         Map<String, Object> response = new LinkedHashMap<String, Object>();
         response.put("status", HttpStatus.OK.value());
 
         if (keyword == null || keyword.isEmpty()) {
-            response.put("data", employeeService.findAll());
+            response.put("data", userService.findAll());
         }
         else {
-            response.put("data", employeeService.search(keyword));
+            response.put("data", userService.search(keyword));
         }
 
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
 
-    @GetMapping("/employees/page")
+    @GetMapping("/users/page")
     public ResponseEntity<Map<String, Object>> getList(
             @RequestParam(defaultValue = "0", required = false) int page,
             @RequestParam(defaultValue = "20", required = false) int size,
             @RequestParam(defaultValue = "id", required = false) String sortBy,
             @RequestParam(defaultValue = "ASC", required = false) String sortDirection) {
-        Page<EmployeeDTO> employees = employeeService.findAllWithPaging(page, size, sortBy, sortDirection);
+        Page<UserDTO> user = userService.findAllWithPaging(page, size, sortBy, sortDirection);
         Map<String, Object> response = new LinkedHashMap<String, Object>();
-        response.put("data", employees);
+        response.put("data", user);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }

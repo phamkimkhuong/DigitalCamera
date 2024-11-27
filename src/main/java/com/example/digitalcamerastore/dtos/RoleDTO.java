@@ -6,8 +6,6 @@
 
 package com.example.digitalcamerastore.dtos;
 
-import com.example.digitalcamerastore.entities.Employee;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 /*

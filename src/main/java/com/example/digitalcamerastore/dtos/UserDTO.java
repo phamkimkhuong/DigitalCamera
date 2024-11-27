@@ -24,9 +24,8 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class EmployeeDTO {
+public class UserDTO {
     private int id;
-    @NotNull(message = "Full name is required")
     @NotEmpty(message = "Full name is required")
     private String fullName;
     @NotNull(message = "Email is required")

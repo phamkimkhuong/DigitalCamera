@@ -7,7 +7,6 @@
 package com.example.digitalcamerastore.entities;
 
 import jakarta.persistence.*;
-import jdk.jfr.Name;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -25,8 +24,8 @@ import java.util.List;
 @Setter
 @ToString
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "user")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -35,8 +34,8 @@ public class Employee {
     private String phone;
     private String password;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "employee_roles", joinColumns = {
-            @JoinColumn(name = "employee_id", referencedColumnName = "id") }, inverseJoinColumns = {
+    @JoinTable(name = "user_roles", joinColumns = {
+            @JoinColumn(name = "user_id", referencedColumnName = "id") }, inverseJoinColumns = {
             @JoinColumn(name = "role_id", referencedColumnName = "id") })
     private List<Role> roles = new ArrayList<Role>();
 }

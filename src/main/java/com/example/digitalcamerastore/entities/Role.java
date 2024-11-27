@@ -8,7 +8,6 @@ package com.example.digitalcamerastore.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -22,7 +21,6 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name = "role")
 public class Role {
@@ -32,6 +30,6 @@ public class Role {
     @Column(nullable = false, unique = true)
     private String name;
     @ManyToMany(mappedBy = "roles")
-    private List<Employee> users;
+    private List<User> users;
 
 }
