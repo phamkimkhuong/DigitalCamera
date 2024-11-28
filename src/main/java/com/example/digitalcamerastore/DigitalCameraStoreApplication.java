@@ -23,4 +23,5 @@ public class DigitalCameraStoreApplication {
     public ModelMapper modelMapper() {
         return new ModelMapper();
     } 
+    
 }

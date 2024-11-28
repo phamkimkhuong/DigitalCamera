@@ -29,5 +29,4 @@ public class MayAnh {
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "maThuongHieu")
 	private ThuongHieu thuongHieu;
-
 }
