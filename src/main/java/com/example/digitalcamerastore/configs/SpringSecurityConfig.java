@@ -48,6 +48,9 @@ public class SpringSecurityConfig {
                 })
                 .authorizeHttpRequests(authorize -> {
                     authorize.requestMatchers("/users/**").hasRole("ADMIN");
+                    authorize.requestMatchers("/hoadons/**").hasRole("ADMIN");
+                    authorize.requestMatchers("/chitiethoadon/**").hasRole("ADMIN");
+                    authorize.requestMatchers("/mayanhs/**").hasAnyRole("ADMIN", "USER");
                     authorize.requestMatchers("/login").permitAll();
                     authorize.anyRequest().permitAll();
                 })
