@@ -1,5 +1,5 @@
 /*
- * @(#) $(NAME).java    1.0     11/26/2024
+ * @(#) $(NAME).java    1.0     11/28/2024
  *
  * Copyright (c) 2024 IUH. All rights reserved.
  */
@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  * @description
  * @author: Tran Tan Dat
  * @version: 1.0
- * @created: 26-November-2024 10:31 PM
+ * @created: 28-November-2024 2:54 PM
  */
 @Service
 public class CustomUserDetailService implements UserDetailsService {
@@ -35,7 +35,7 @@ public class CustomUserDetailService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email);
 
-        if(user == null){
+        if (user == null) {
             throw new UsernameNotFoundException("Invalid email or password");
         }
 
@@ -44,7 +44,7 @@ public class CustomUserDetailService implements UserDetailsService {
                 user.getPassword(),
                 user.getRoles()
                         .stream().map(
-                                (role)->new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList()));
+                                (role) -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList()));
     }
 
 }

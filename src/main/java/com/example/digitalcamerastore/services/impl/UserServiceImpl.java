@@ -91,7 +91,6 @@ public class UserServiceImpl implements UserService {
             role.setName("ROLE_ADMIN");
             roleRepository.save(role);
         }
-
         User user = this.convertToEntity(userDTO);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles(List.of(role));

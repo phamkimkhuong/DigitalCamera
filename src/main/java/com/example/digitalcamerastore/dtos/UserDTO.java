@@ -13,11 +13,15 @@ package com.example.digitalcamerastore.dtos;
  * @created: 27-November-2024 2:25 PM
  */
 
+import com.example.digitalcamerastore.entities.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,5 +38,7 @@ public class UserDTO {
     @Pattern(regexp = "\\(\\d{3}\\)\\d{3}-\\d{4}", message = "Please input phone number with format: (NNN)NNN-NNNN")
     private String phone;
     private String password;
+    @JsonIgnore
+    private List<Role> roles;
 
 }

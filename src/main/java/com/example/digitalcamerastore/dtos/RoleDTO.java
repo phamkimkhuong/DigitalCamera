@@ -6,7 +6,11 @@
 
 package com.example.digitalcamerastore.dtos;
 
+import com.example.digitalcamerastore.entities.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+
+import java.util.List;
 
 /*
  * @description
@@ -22,4 +26,6 @@ import lombok.*;
 public class RoleDTO {
     private int id;
     private String name;
+    @JsonIgnore
+    private List<User> users;
 }

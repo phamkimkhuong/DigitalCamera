@@ -21,7 +21,7 @@ import java.util.List;
  * @version: 1.0
  * @created: 27-November-2024 2:30 PM
  */
-@RepositoryRestResource(collectionResourceRel = "employees", path = "employees")
+@RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends JpaRepository<User, Integer> {
     @Query(value = "SELECT e FROM User e WHERE e.fullName LIKE  %:keyword%"
             + " OR e.email LIKE %:keyword%"
