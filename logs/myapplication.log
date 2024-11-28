@@ -86,3 +86,400 @@
 2024-11-29T00:25:54.809+07:00  INFO 11872 --- [DigitalCameraStore] [RMI TCP Connection(144)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-29T00:25:54.855+07:00  INFO 11872 --- [DigitalCameraStore] [RMI TCP Connection(144)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-11-29T00:25:54.863+07:00  INFO 11872 --- [DigitalCameraStore] [RMI TCP Connection(144)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-29T00:38:34.994+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Starting DigitalCameraStoreApplication using Java 23 with PID 19440 (C:\Users\phamk\Downloads\demo2\DigitalCamera\target\classes started by phamk in C:\Users\phamk\Downloads\demo2\DigitalCamera)
+2024-11-29T00:38:34.997+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T00:38:35.066+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-29T00:38:35.067+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-29T00:38:36.557+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T00:38:36.641+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 5 JPA repository interfaces.
+2024-11-29T00:38:37.901+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-11-29T00:38:37.930+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T00:38:37.931+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-29T00:38:38.043+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T00:38:38.044+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2977 ms
+2024-11-29T00:38:38.800+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T00:38:38.843+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-29T00:38:39.321+07:00  WARN 19440 --- [DigitalCameraStore] [restartedMain] o.m.jdbc.message.server.ErrorPacket      : Error: 1045-28000: Access denied for user 'root'@'localhost' (using password: YES)
+2024-11-29T00:38:40.339+07:00 ERROR 19440 --- [DigitalCameraStore] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : (conn=1660) Access denied for user 'root'@'localhost' (using password: YES)
+2024-11-29T00:38:40.341+07:00 ERROR 19440 --- [DigitalCameraStore] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-11-29T00:38:40.342+07:00  WARN 19440 --- [DigitalCameraStore] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-11-29T00:38:40.347+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-11-29T00:38:40.368+07:00  INFO 19440 --- [DigitalCameraStore] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-29T00:38:40.400+07:00 ERROR 19440 --- [DigitalCameraStore] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.digitalcamerastore.DigitalCameraStoreApplication.main(DigitalCameraStoreApplication.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:153)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:364)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+
+2024-11-29T00:39:44.607+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Starting DigitalCameraStoreApplication using Java 23 with PID 18224 (C:\Users\phamk\Downloads\demo2\DigitalCamera\target\classes started by phamk in C:\Users\phamk\Downloads\demo2\DigitalCamera)
+2024-11-29T00:39:44.610+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T00:39:44.686+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-29T00:39:44.687+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-29T00:39:45.925+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T00:39:46.011+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 5 JPA repository interfaces.
+2024-11-29T00:39:46.845+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-11-29T00:39:46.865+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T00:39:46.865+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-29T00:39:46.960+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T00:39:46.960+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2273 ms
+2024-11-29T00:39:47.696+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T00:39:47.738+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-29T00:39:47.855+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7a25a714
+2024-11-29T00:39:47.857+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-29T00:39:49.240+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:39:49.619+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-29T00:39:50.623+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T00:39:50.786+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-29T00:39:51.052+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-11-29T00:39:51.221+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /api/explorer/**] in 'resourceHandlerMapping'
+2024-11-29T00:39:51.568+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-29T00:39:51.621+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-29T00:39:51.666+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2024-11-29T00:39:51.711+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-29T00:39:52.157+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-29T00:39:52.219+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9998 (http) with context path '/'
+2024-11-29T00:39:52.231+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Started DigitalCameraStoreApplication in 8.28 seconds (process running for 9.251)
+2024-11-29T00:39:52.236+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : RestApiDemoApplication Start
+2024-11-29T00:40:09.885+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-29T00:40:09.886+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-29T00:40:09.886+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-11-29T00:40:09.887+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-11-29T00:40:09.887+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-11-29T00:40:09.890+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@370bdd6d
+2024-11-29T00:40:09.891+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@48358cc0
+2024-11-29T00:40:09.892+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-29T00:40:09.892+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2024-11-29T00:40:09.955+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/index.html", parameters={}
+2024-11-29T00:40:09.963+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:09.995+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.050+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/runtime.5a18b14f9022abaf.js", parameters={}
+2024-11-29T00:40:10.052+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.062+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/polyfills.e7aace323f39b3ac.js", parameters={}
+2024-11-29T00:40:10.064+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.066+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.071+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.076+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/main.c915a43981f7ba9b.js", parameters={}
+2024-11-29T00:40:10.078+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.089+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.155+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/scripts.1ac6d0d02f230370.js", parameters={}
+2024-11-29T00:40:10.157+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/styles.74f7edb436bbdd09.css", parameters={}
+2024-11-29T00:40:10.157+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.159+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.162+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.167+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.305+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api", parameters={}
+2024-11-29T00:40:10.309+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/favicon.ico", parameters={}
+2024-11-29T00:40:10.311+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.324+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.332+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/styles.74f7edb436bbdd09.css", parameters={}
+2024-11-29T00:40:10.334+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.344+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.380+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/prs.hal-forms+json', given [application/prs.hal-forms+json, application/hal+json, application/json, */*] and supported [application/hal+json, application/json, application/prs.hal-forms+json]
+2024-11-29T00:40:10.449+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] m.m.a.RequestResponseBodyMethodProcessor : HalFormsRejectingResponseBodyAdvice - Changing content type to 'application/hal+json' as no affordances were registered on the representation model to be rendered
+2024-11-29T00:40:10.451+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [links: [<http://localhost:9998/api/chitiethoadon{?page,size,sort*}>;rel="chitiethoadon", <http://loc (truncated)...]
+2024-11-29T00:40:10.515+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:10.976+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/fontello.bbc00ebde0e591e5.woff2?56069284", parameters={masked}
+2024-11-29T00:40:10.985+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:10.989+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:11.168+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/explorer/favicon.ico", parameters={}
+2024-11-29T00:40:11.185+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/spring-data-rest/hal-explorer/]]
+2024-11-29T00:40:11.191+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:14.596+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/mayanhs", parameters={}
+2024-11-29T00:40:14.922+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:40:14.936+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[MayAnhDTO(maMayAnh=1, tenMayAnh=Canon EOS 5D Mark IV, soLuong=10, giaBan=5.0E7, m (truncated)...]
+2024-11-29T00:40:14.944+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:27.178+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2024-11-29T00:40:27.188+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:40:27.188+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[UserDTO(id=1, fullName=Ha, email=ha@gmail.com, phone=012, password=123, roles=[]) (truncated)...]
+2024-11-29T00:40:27.211+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:36.762+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2024-11-29T00:40:36.780+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:40:36.780+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[UserDTO(id=1, fullName=Ha, email=ha@gmail.com, phone=012, password=123, roles=[]) (truncated)...]
+2024-11-29T00:40:36.782+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:40:51.617+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2024-11-29T00:40:51.634+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:40:51.634+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[UserDTO(id=1, fullName=Ha, email=ha@gmail.com, phone=012, password=123, roles=[]) (truncated)...]
+2024-11-29T00:40:51.635+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:43:58.544+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/users", parameters={}
+2024-11-29T00:43:58.560+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:43:58.560+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[UserDTO(id=1, fullName=Ha, email=ha@gmail.com, phone=012, password=123, roles=[]) (truncated)...]
+2024-11-29T00:43:58.560+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:43:58.592+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/mayanhs", parameters={}
+2024-11-29T00:43:58.607+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:43:58.607+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[MayAnhDTO(maMayAnh=1, tenMayAnh=Canon EOS 5D Mark IV, soLuong=10, giaBan=5.0E7, m (truncated)...]
+2024-11-29T00:43:58.607+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:44:00.546+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/mayanhs", parameters={}
+2024-11-29T00:44:00.567+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:44:00.570+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[MayAnhDTO(maMayAnh=1, tenMayAnh=Canon EOS 5D Mark IV, soLuong=10, giaBan=5.0E7, m (truncated)...]
+2024-11-29T00:44:00.573+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:47:42.245+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/mayanhs", parameters={}
+2024-11-29T00:47:42.261+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:47:42.264+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[MayAnhDTO(maMayAnh=1, tenMayAnh=Canon EOS 5D Mark IV, soLuong=10, giaBan=5.0E7, m (truncated)...]
+2024-11-29T00:47:42.266+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:49:12.078+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/mayanhs", parameters={}
+2024-11-29T00:49:12.093+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:49:12.096+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[MayAnhDTO(maMayAnh=1, tenMayAnh=Canon EOS 5D Mark IV, soLuong=10, giaBan=5.0E7, m (truncated)...]
+2024-11-29T00:49:12.098+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:49:31.081+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/mayanhs", parameters={}
+2024-11-29T00:49:31.094+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:49:31.097+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[MayAnhDTO(maMayAnh=1, tenMayAnh=Canon EOS 5D Mark IV, soLuong=10, giaBan=5.0E7, m (truncated)...]
+2024-11-29T00:49:31.100+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:49:38.520+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/api/mayanhs", parameters={}
+2024-11-29T00:49:38.532+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:49:38.535+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=200, data=[MayAnhDTO(maMayAnh=1, tenMayAnh=Canon EOS 5D Mark IV, soLuong=10, giaBan=5.0E7, m (truncated)...]
+2024-11-29T00:49:38.537+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-11-29T00:51:10.172+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/users", parameters={}
+2024-11-29T00:51:10.440+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/hal+json, application/json]
+2024-11-29T00:51:10.440+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [EntityModel { content: User(id=5, fullName=null, email=phamkhuong436@gmail.com, phone=null, password (truncated)...]
+2024-11-29T00:51:10.501+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2024-11-29T00:53:45.822+07:00  INFO 18224 --- [DigitalCameraStore] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2024-11-29T00:53:45.842+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:53:45.847+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-29T00:53:45.852+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-29T00:53:46.015+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Starting DigitalCameraStoreApplication using Java 23 with PID 18224 (C:\Users\phamk\Downloads\demo2\DigitalCamera\target\classes started by phamk in C:\Users\phamk\Downloads\demo2\DigitalCamera)
+2024-11-29T00:53:46.016+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T00:53:46.506+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T00:53:46.545+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
+2024-11-29T00:53:46.949+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-11-29T00:53:46.952+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T00:53:46.953+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-29T00:53:47.013+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T00:53:47.015+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 996 ms
+2024-11-29T00:53:47.199+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T00:53:47.202+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-11-29T00:53:47.212+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@538dd1fb
+2024-11-29T00:53:47.213+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-11-29T00:53:47.476+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:53:47.951+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T00:53:48.077+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-29T00:53:48.198+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-11-29T00:53:48.306+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /api/explorer/**] in 'resourceHandlerMapping'
+2024-11-29T00:53:48.521+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-29T00:53:48.537+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-29T00:53:48.563+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2024-11-29T00:53:48.585+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-29T00:53:48.979+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-29T00:53:49.015+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9998 (http) with context path '/'
+2024-11-29T00:53:49.021+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Started DigitalCameraStoreApplication in 3.083 seconds (process running for 846.042)
+2024-11-29T00:53:49.024+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-29T00:53:49.025+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : RestApiDemoApplication Start
+2024-11-29T00:54:09.030+07:00  INFO 18224 --- [DigitalCameraStore] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-11-29T00:54:09.044+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:54:09.046+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-11-29T00:54:09.048+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-11-29T00:54:09.196+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Starting DigitalCameraStoreApplication using Java 23 with PID 18224 (C:\Users\phamk\Downloads\demo2\DigitalCamera\target\classes started by phamk in C:\Users\phamk\Downloads\demo2\DigitalCamera)
+2024-11-29T00:54:09.196+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T00:54:09.628+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T00:54:09.664+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
+2024-11-29T00:54:10.024+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-11-29T00:54:10.025+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T00:54:10.025+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-29T00:54:10.070+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T00:54:10.070+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 871 ms
+2024-11-29T00:54:10.234+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T00:54:10.236+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-11-29T00:54:10.240+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.mariadb.jdbc.Connection@76303d62
+2024-11-29T00:54:10.241+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-11-29T00:54:10.510+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:54:11.051+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T00:54:11.171+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-29T00:54:11.305+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-11-29T00:54:11.486+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /api/explorer/**] in 'resourceHandlerMapping'
+2024-11-29T00:54:11.688+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-29T00:54:11.705+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-29T00:54:11.735+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2024-11-29T00:54:11.764+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-29T00:54:12.081+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-29T00:54:12.128+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9998 (http) with context path '/'
+2024-11-29T00:54:12.135+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Started DigitalCameraStoreApplication in 3.001 seconds (process running for 869.155)
+2024-11-29T00:54:12.137+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-29T00:54:12.138+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : RestApiDemoApplication Start
+2024-11-29T00:54:53.999+07:00  INFO 18224 --- [DigitalCameraStore] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-11-29T00:54:54.012+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:54:54.013+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-11-29T00:54:54.016+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-11-29T00:54:54.146+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Starting DigitalCameraStoreApplication using Java 23 with PID 18224 (C:\Users\phamk\Downloads\demo2\DigitalCamera\target\classes started by phamk in C:\Users\phamk\Downloads\demo2\DigitalCamera)
+2024-11-29T00:54:54.146+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T00:54:54.553+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T00:54:54.588+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 5 JPA repository interfaces.
+2024-11-29T00:54:54.918+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-11-29T00:54:54.920+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T00:54:54.921+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-29T00:54:54.992+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T00:54:54.993+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 843 ms
+2024-11-29T00:54:55.179+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T00:54:55.181+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-11-29T00:54:55.186+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.mariadb.jdbc.Connection@153f9f8
+2024-11-29T00:54:55.187+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-11-29T00:54:55.418+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:54:55.904+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T00:54:56.056+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-29T00:54:56.176+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-11-29T00:54:56.285+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /api/explorer/**] in 'resourceHandlerMapping'
+2024-11-29T00:54:56.474+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-29T00:54:56.493+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-29T00:54:56.516+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2024-11-29T00:54:56.535+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-29T00:54:56.842+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-29T00:54:56.887+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9998 (http) with context path '/'
+2024-11-29T00:54:56.895+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Started DigitalCameraStoreApplication in 2.807 seconds (process running for 913.915)
+2024-11-29T00:54:56.897+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-29T00:54:56.897+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : RestApiDemoApplication Start
+2024-11-29T00:55:11.894+07:00  INFO 18224 --- [DigitalCameraStore] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-11-29T00:55:11.907+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:55:11.908+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-11-29T00:55:11.914+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-11-29T00:55:12.072+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Starting DigitalCameraStoreApplication using Java 23 with PID 18224 (C:\Users\phamk\Downloads\demo2\DigitalCamera\target\classes started by phamk in C:\Users\phamk\Downloads\demo2\DigitalCamera)
+2024-11-29T00:55:12.073+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T00:55:12.677+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T00:55:12.725+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 5 JPA repository interfaces.
+2024-11-29T00:55:13.054+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-11-29T00:55:13.055+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T00:55:13.055+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-29T00:55:13.103+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T00:55:13.103+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1028 ms
+2024-11-29T00:55:13.273+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T00:55:13.275+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-11-29T00:55:13.281+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.mariadb.jdbc.Connection@77f501ae
+2024-11-29T00:55:13.281+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-11-29T00:55:13.475+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:55:13.888+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T00:55:14.056+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-29T00:55:14.181+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-11-29T00:55:14.362+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /api/explorer/**] in 'resourceHandlerMapping'
+2024-11-29T00:55:14.750+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-29T00:55:14.778+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-29T00:55:14.813+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2024-11-29T00:55:14.852+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-29T00:55:15.292+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-29T00:55:15.322+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9998 (http) with context path '/'
+2024-11-29T00:55:15.328+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Started DigitalCameraStoreApplication in 3.331 seconds (process running for 932.348)
+2024-11-29T00:55:15.331+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-29T00:55:15.331+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : RestApiDemoApplication Start
+2024-11-29T00:56:37.230+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-29T00:56:37.230+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-29T00:56:37.230+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-11-29T00:56:37.230+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-11-29T00:56:37.231+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-11-29T00:56:37.234+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@579105c1
+2024-11-29T00:56:37.235+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@76c272fb
+2024-11-29T00:56:37.235+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-29T00:56:37.235+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-11-29T00:56:37.243+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/users/ha@gmail.com", parameters={}
+2024-11-29T00:56:37.268+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.example.digitalcamerastore.exceptions.GlobalExceptionHandler#globleExcpetionHandler(Exception)
+2024-11-29T00:56:37.268+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-11-29T00:56:37.268+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=500, message=Failed to convert from type [java.lang.String] to type [java.lang.Integer] for  (truncated)...]
+2024-11-29T00:56:37.268+07:00  WARN 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.lang.Integer] for value [ha@gmail.com]]
+2024-11-29T00:56:37.268+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2024-11-29T00:56:50.783+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/user/ha@gmail.com", parameters={}
+2024-11-29T00:56:50.785+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-11-29T00:56:50.793+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-11-29T00:56:50.795+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.example.digitalcamerastore.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
+2024-11-29T00:56:50.801+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/problem+json]
+2024-11-29T00:56:50.809+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Not Found', status=404, detail='No static resource api/user (truncated)...]
+2024-11-29T00:56:50.811+07:00  WARN 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/user/ha@gmail.com.]
+2024-11-29T00:56:50.811+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-11-29T00:57:02.560+07:00  INFO 18224 --- [DigitalCameraStore] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-11-29T00:57:02.560+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:57:02.560+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-11-29T00:57:02.576+07:00  INFO 18224 --- [DigitalCameraStore] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-11-29T00:57:02.701+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Starting DigitalCameraStoreApplication using Java 23 with PID 18224 (C:\Users\phamk\Downloads\demo2\DigitalCamera\target\classes started by phamk in C:\Users\phamk\Downloads\demo2\DigitalCamera)
+2024-11-29T00:57:02.701+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T00:57:03.222+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T00:57:03.267+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
+2024-11-29T00:57:03.667+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-11-29T00:57:03.672+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T00:57:03.672+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-29T00:57:03.754+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T00:57:03.754+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1053 ms
+2024-11-29T00:57:03.929+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T00:57:03.932+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-11-29T00:57:03.941+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.mariadb.jdbc.Connection@363f5a95
+2024-11-29T00:57:03.941+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-11-29T00:57:04.159+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T00:57:04.663+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T00:57:04.795+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-29T00:57:04.905+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-11-29T00:57:05.042+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /api/explorer/**] in 'resourceHandlerMapping'
+2024-11-29T00:57:05.265+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-29T00:57:05.288+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-29T00:57:05.324+07:00 DEBUG 18224 --- [DigitalCameraStore] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2024-11-29T00:57:05.365+07:00  WARN 18224 --- [DigitalCameraStore] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-29T00:57:05.757+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-29T00:57:05.793+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9998 (http) with context path '/'
+2024-11-29T00:57:05.801+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : Started DigitalCameraStoreApplication in 3.147 seconds (process running for 1042.821)
+2024-11-29T00:57:05.804+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-29T00:57:05.805+07:00  INFO 18224 --- [DigitalCameraStore] [restartedMain] c.e.d.DigitalCameraStoreApplication      : RestApiDemoApplication Start
+2024-11-29T00:57:18.579+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-29T00:57:18.580+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-29T00:57:18.580+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-11-29T00:57:18.580+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-11-29T00:57:18.580+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-11-29T00:57:18.583+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@284efd07
+2024-11-29T00:57:18.583+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@65f5ceca
+2024-11-29T00:57:18.584+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-11-29T00:57:18.584+07:00  INFO 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-11-29T00:57:18.586+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/users/email", parameters={}
+2024-11-29T00:57:18.602+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.example.digitalcamerastore.controllers.UserController.getUserByEmail(java.lang.String): Required request parameter 'email' for method parameter type String is not present
+2024-11-29T00:57:18.602+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.example.digitalcamerastore.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
+2024-11-29T00:57:18.602+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/problem+json]
+2024-11-29T00:57:18.602+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Bad Request', status=400, detail='Required parameter 'email (truncated)...]
+2024-11-29T00:57:18.618+07:00  WARN 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'email' for method parameter type String is not present]
+2024-11-29T00:57:18.618+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2024-11-29T00:57:27.561+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/users/email/ha@gmail.com", parameters={}
+2024-11-29T00:57:27.569+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.example.digitalcamerastore.exceptions.GlobalExceptionHandler#globleExcpetionHandler(Exception)
+2024-11-29T00:57:27.569+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-11-29T00:57:27.569+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{status=500, message=EntityRepresentationModel not found}]
+2024-11-29T00:57:27.569+07:00  WARN 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.data.rest.webmvc.ResourceNotFoundException: EntityRepresentationModel not found]
+2024-11-29T00:57:27.569+07:00 DEBUG 18224 --- [DigitalCameraStore] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2024-11-29T01:00:50.852+07:00  INFO 18224 --- [DigitalCameraStore] [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-29T01:00:50.869+07:00  INFO 18224 --- [DigitalCameraStore] [RMI TCP Connection(24)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T01:00:50.871+07:00  INFO 18224 --- [DigitalCameraStore] [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-11-29T01:00:50.878+07:00  INFO 18224 --- [DigitalCameraStore] [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.

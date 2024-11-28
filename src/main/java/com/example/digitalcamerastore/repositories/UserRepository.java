@@ -27,7 +27,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
             + " OR e.email LIKE %:keyword%"
             + " OR e.phone LIKE  %:keyword%")
     List<User> search(@Param("keyword") String keyword);
-    public User findByEmail(String email);
+    public List<User> findByEmail(String email);
 }
 
     

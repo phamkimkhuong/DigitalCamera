@@ -17,6 +17,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.digitalcamerastore.dtos.UserDTO;
 import com.example.digitalcamerastore.entities.Role;
@@ -26,7 +27,6 @@ import com.example.digitalcamerastore.repositories.RoleRepository;
 import com.example.digitalcamerastore.repositories.UserRepository;
 import com.example.digitalcamerastore.services.UserService;
 
-import jakarta.transaction.Transactional;
 
 /*
  * @description
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
 		return this.convertToDTO(user);
 	}
 
-	@org.springframework.transaction.annotation.Transactional
+	@Transactional
 	@Override
 	public List<UserDTO> findAll() {
 		return userRepository.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());
@@ -126,6 +126,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO findByEmail(String email) {
-		return this.convertToDTO(userRepository.findByEmail(email));
+		User user = userRepository.findByEmail(email).get(0);
+		return this.convertToDTO(user);
 	}
 }

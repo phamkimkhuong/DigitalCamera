@@ -33,7 +33,7 @@ public class CustomUserDetailService implements UserDetailsService {
     @Transactional
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userRepository.findByEmail(email);
+        User user = userRepository.findByEmail(email).get(0);
 
         if (user == null) {
             throw new UsernameNotFoundException("Invalid email or password");
