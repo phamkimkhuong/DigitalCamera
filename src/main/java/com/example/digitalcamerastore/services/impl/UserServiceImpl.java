@@ -123,4 +123,9 @@ public class UserServiceImpl implements UserService {
 	public List<UserDTO> search(String keyword) {
 		return userRepository.search(keyword).stream().map(this::convertToDTO).collect(Collectors.toList());
 	}
+
+	@Override
+	public UserDTO findByEmail(String email) {
+		return this.convertToDTO(userRepository.findByEmail(email));
+	}
 }

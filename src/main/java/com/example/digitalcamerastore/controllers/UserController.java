@@ -124,4 +124,12 @@ public class UserController {
         response.put("data", user);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
+    
+    @GetMapping("/user/email")
+	public ResponseEntity<Map<String, Object>> getUserByEmail(@RequestParam String email) {
+		Map<String, Object> response = new LinkedHashMap<String, Object>();
+		response.put("status", HttpStatus.OK.value());
+		response.put("data", userService.findByEmail(email));
+		return ResponseEntity.status(HttpStatus.OK).body(response);
+	}
 }

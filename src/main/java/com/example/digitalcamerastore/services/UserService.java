@@ -32,6 +32,8 @@ public interface UserService {
     public boolean delete(int id);
 
     public List<UserDTO> search(String keyword);
+    
+    public UserDTO findByEmail(String email);
 }
 
     
