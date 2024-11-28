@@ -22,5 +22,5 @@ public class DigitalCameraStoreApplication {
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
-    }
+    } 
 }
