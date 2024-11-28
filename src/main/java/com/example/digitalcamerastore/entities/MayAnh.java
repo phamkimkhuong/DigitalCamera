@@ -17,18 +17,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "may_anh")
+@Table
 public class MayAnh {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int maMayAnh;
-    private String tenMayAnh;
-    private int soLuong;
-    private double giaBan;
-    private String moTa;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private ThuongHieu thuongHieu;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int maMayAnh;
+	private String tenMayAnh;
+	private int soLuong;
+	private double giaBan;
+	private String moTa;
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name = "maThuongHieu")
+	private ThuongHieu thuongHieu;
 
 }
-
-
