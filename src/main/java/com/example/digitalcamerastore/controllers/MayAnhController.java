@@ -1,9 +1,3 @@
-/*
- * @(#) $(NAME).java    1.0     11/27/2024
- *
- * Copyright (c) 2024 IUH. All rights reserved.
- */
-
 package com.example.digitalcamerastore.controllers;
 
 import java.util.LinkedHashMap;
@@ -23,26 +17,26 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.digitalcamerastore.dtos.HoaDonDTO;
-import com.example.digitalcamerastore.services.HoaDonService;
+import com.example.digitalcamerastore.dtos.MayAnhDTO;
+import com.example.digitalcamerastore.services.MayAnhService;
 
 import jakarta.validation.Valid;
 
 @RepositoryRestController
-public class HoaDonController {
+public class MayAnhController {
 	@Autowired
-	private HoaDonService hoaDonService;
+	private MayAnhService mayAnhService;
 
-	@GetMapping("/hoadon/{id}")
+	@GetMapping("/mayanh/{id}")
 	public ResponseEntity<Map<String, Object>> getUserById(@PathVariable int id) {
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
 		response.put("status", HttpStatus.OK.value());
-		response.put("data", hoaDonService.findById(id));
+		response.put("data", mayAnhService.findById(id));
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 
-	@PostMapping("/hoadon")
-	public ResponseEntity<Map<String, Object>> saveUser(@Valid @RequestBody HoaDonDTO hoadonDTO,
+	@PostMapping("/mayanh")
+	public ResponseEntity<Map<String, Object>> saveUser(@Valid @RequestBody MayAnhDTO MayAnhDTO,
 			BindingResult bindingResult) {
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
 
@@ -59,14 +53,14 @@ public class HoaDonController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
 		} else {
 			response.put("status", HttpStatus.OK.value());
-			response.put("data", hoaDonService.save(hoadonDTO));
+			response.put("data", mayAnhService.save(MayAnhDTO));
 			return ResponseEntity.status(HttpStatus.OK).body(response);
 		}
 
 	}
 
-	@PutMapping("/hoadon/{id}")
-	public ResponseEntity<Map<String, Object>> updateUser(@PathVariable int id, @Valid @RequestBody HoaDonDTO hoadonDTO,
+	@PutMapping("/mayanh/{id}")
+	public ResponseEntity<Map<String, Object>> updateUser(@PathVariable int id, @Valid @RequestBody MayAnhDTO MayAnhDTO,
 			BindingResult bindingResult) {
 
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
@@ -82,43 +76,42 @@ public class HoaDonController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
 		} else {
 			response.put("status", HttpStatus.OK.value());
-			response.put("data", hoaDonService.update(id, hoadonDTO));
+			response.put("data", mayAnhService.update(id, MayAnhDTO));
 			return ResponseEntity.status(HttpStatus.OK).body(response);
 		}
 	}
 
-	@DeleteMapping("/hoadon/{id}")
+	@DeleteMapping("/mayanh/{id}")
 	public ResponseEntity<Map<String, Object>> deleteUser(@PathVariable int id) {
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
 		response.put("status", HttpStatus.OK.value());
-		response.put("data", hoaDonService.delete(id));
+		response.put("data", mayAnhService.delete(id));
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 
-	@GetMapping("/hoadons")
+	@GetMapping("/mayanhs")
 	public ResponseEntity<Map<String, Object>> getUsers(@RequestParam(required = false) String keyword) {
 
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
 		response.put("status", HttpStatus.OK.value());
 
 		if (keyword == null || keyword.isEmpty()) {
-			response.put("data", hoaDonService.findAll());
+			response.put("data", mayAnhService.findAll());
 		} else {
-			response.put("data", hoaDonService.search(keyword));
+			response.put("data", mayAnhService.search(keyword));
 		}
 
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 
-	@GetMapping("/hoadons/page")
+	@GetMapping("/mayanhs/page")
 	public ResponseEntity<Map<String, Object>> getList(@RequestParam(defaultValue = "0", required = false) int page,
 			@RequestParam(defaultValue = "20", required = false) int size,
 			@RequestParam(defaultValue = "id", required = false) String sortBy,
 			@RequestParam(defaultValue = "ASC", required = false) String sortDirection) {
-		Page<HoaDonDTO> hoadon = hoaDonService.findAllWithPaging(page, size, sortBy, sortDirection);
+		Page<MayAnhDTO> MayAnh = mayAnhService.findAllWithPaging(page, size, sortBy, sortDirection);
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
-		response.put("data", hoadon);
+		response.put("data", MayAnh);
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
-
 }
