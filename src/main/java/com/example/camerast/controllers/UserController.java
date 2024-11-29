@@ -48,7 +48,7 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 
-	@PostMapping("/user")
+	@PostMapping("/users")
 	public ResponseEntity<Map<String, Object>> saveUser(@Valid @RequestBody UserDTO userDTO,
 			BindingResult bindingResult) {
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
