@@ -15,6 +15,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,7 +29,6 @@ import com.example.digitalcamerastore.exceptions.ItemNotFoundException;
 import com.example.digitalcamerastore.repositories.RoleRepository;
 import com.example.digitalcamerastore.repositories.UserRepository;
 import com.example.digitalcamerastore.services.UserService;
-
 
 /*
  * @description
@@ -126,7 +128,19 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO findByEmail(String email) {
-		User user = userRepository.findByEmail(email).get(0);
+		User user = userRepository.findByEmail(email);
 		return this.convertToDTO(user);
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		User user = userRepository.findByEmail(username);
+		if (user == null) {
+			throw new UsernameNotFoundException("Invalid email or password");
+		}
+		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
+				user.getRoles().stream().map((role) -> new SimpleGrantedAuthority(role.getName()))
+						.collect(Collectors.toList()));
+
 	}
 }

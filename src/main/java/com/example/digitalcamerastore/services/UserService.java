@@ -9,6 +9,7 @@ package com.example.digitalcamerastore.services;
 
 import com.example.digitalcamerastore.dtos.UserDTO;
 import org.springframework.data.domain.Page;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ import java.util.List;
  * @version: 1.0
  * @created: 27-November-2024 2:28 PM
  */
-public interface UserService {
+public interface UserService extends UserDetailsService {
     public UserDTO findById(int id);
 
     public List<UserDTO> findAll();
