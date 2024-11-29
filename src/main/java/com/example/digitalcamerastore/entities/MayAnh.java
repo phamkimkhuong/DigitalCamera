@@ -21,11 +21,14 @@ import lombok.Setter;
 public class MayAnh {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int maMayAnh;
-	private String tenMayAnh;
+	private int id;
+	private String ten;
 	private int soLuong;
-	private double giaBan;
-	private String moTa;
+	private double giacu;
+	private double giamoi;
+	private String maSanPham;
+	private String link;
+	private String linkHome;
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "maThuongHieu")
 	private ThuongHieu thuongHieu;

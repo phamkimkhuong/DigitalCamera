@@ -22,7 +22,7 @@ public class ChiTietHoaDon {
     private int soLuong;
     private double giaBan;
     @ManyToOne
-    @JoinColumn(name = "maMayAnh", referencedColumnName = "maMayAnh")
+    @JoinColumn(name = "id", referencedColumnName = "id")
     private MayAnh mayAnh;
     @ManyToOne
     @JoinColumn(name = "maHoaDon", referencedColumnName = "maHoaDon")
