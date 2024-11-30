@@ -1,6 +1,7 @@
 package com.example.camerast.dtos;
 
-import com.example.camerast.entities.ThuongHieu;
+import com.example.camerast.entities.MayAnh;
+import com.example.camerast.entities.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
@@ -14,15 +15,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class MayAnhDTO {
-	private int id;
-	private String name;
+public class GioHangDTO {
+	private int maGioHang;
 	private int soLuong;
-	private double oldPrice;
-	private double currentPrice;
-	private String maSanPham;
-	private String link;
-	private String linkHome;
 	@JsonIgnore
-	private ThuongHieu thuongHieu;
+	private User user;
+	@JsonIgnore
+	private MayAnh mayAnh;
 }

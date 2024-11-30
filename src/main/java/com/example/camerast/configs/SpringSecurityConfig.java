@@ -6,6 +6,8 @@
 
 package com.example.camerast.configs;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +22,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import com.example.camerast.services.UserService;
 
@@ -35,6 +40,7 @@ public class SpringSecurityConfig {
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+
 	@Bean
 	DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
@@ -49,7 +55,8 @@ public class SpringSecurityConfig {
 			csrf.disable();
 			// Require authentication
 		}).authorizeHttpRequests(authorize -> {
-//			authorize.requestMatchers("/api/users/**").hasRole("ADMIN");
+			authorize.requestMatchers(HttpMethod.PUT, "/api/users/**").hasRole("ADMIN");
+			authorize.requestMatchers(HttpMethod.DELETE, "/api/users/**").hasRole("ADMIN");
 			authorize.requestMatchers("/api/users/**").permitAll();
 			authorize.requestMatchers("/api/hoadons/**").hasRole("ADMIN");
 			authorize.requestMatchers("/api/chitiethoadon/**").hasRole("ADMIN");
@@ -59,8 +66,7 @@ public class SpringSecurityConfig {
 			authorize.requestMatchers(HttpMethod.GET, "/api/mayanhs/**").permitAll();
 			authorize.requestMatchers("/api/login").permitAll();
 			authorize.anyRequest().permitAll();
-			// Specify the login page and permit all access to it
-		}).formLogin(form -> {
+		}).cors(cors -> cors.configurationSource(corsConfigurationSource())).formLogin(form -> {
 			form.loginProcessingUrl("/api/login");
 //			form.loginPage("");
 			form.defaultSuccessUrl("/api/users");
@@ -69,6 +75,20 @@ public class SpringSecurityConfig {
 				.httpBasic(Customizer.withDefaults());
 
 		return httpSecurity.build();
+	}
+
+	@Bean
+	public CorsConfigurationSource corsConfigurationSource() {
+		CorsConfiguration configuration = new CorsConfiguration();
+		configuration.setAllowedOrigins(Arrays.asList("http://localhost:8080")); // Nguồn cho phép
+		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Phương thức cho
+																									// phép
+		configuration.setAllowCredentials(true); // Cho phép cookie
+		configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type")); // Tiêu đề cho phép
+
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", configuration); // Áp dụng cho tất cả đường dẫn
+		return source;
 	}
 
 	@Autowired

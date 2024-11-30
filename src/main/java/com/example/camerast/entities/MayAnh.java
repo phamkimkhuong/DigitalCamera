@@ -22,10 +22,10 @@ public class MayAnh {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String ten;
+	private String name;
 	private int soLuong;
-	private double giacu;
-	private double giamoi;
+	private double oldPrice;
+	private double currentPrice;
 	private String maSanPham;
 	private String link;
 	private String linkHome;

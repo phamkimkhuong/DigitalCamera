@@ -11,7 +11,7 @@ import com.example.camerast.entities.MayAnh;
 
 @RepositoryRestResource(collectionResourceRel = "mayanhs", path = "mayanhs")
 public interface MayAnhRepository extends JpaRepository<MayAnh, Integer> {
-	@Query(value = "SELECT e FROM MayAnh e WHERE e.ten LIKE  %:keyword%")
+	@Query(value = "SELECT e FROM MayAnh e WHERE e.name LIKE  %:keyword%")
 	//+ " OR e.lastName LIKE %:keyword% OR e.emailAddress LIKE  %:keyword%" + " OR e.phoneNumber LIKE  %:keyword%")
 		List<MayAnh> search(@Param("keyword") String keyword);
 }
