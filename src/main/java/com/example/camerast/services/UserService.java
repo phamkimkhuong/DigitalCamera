@@ -36,6 +36,8 @@ public interface UserService extends UserDetailsService {
     public List<UserDTO> search(String keyword);
     
     public UserDTO findByEmail(String email);
+
+    public boolean findByEmailAndPassword(String email, String password);
 }
 
     

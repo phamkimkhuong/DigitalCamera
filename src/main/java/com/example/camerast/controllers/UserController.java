@@ -135,4 +135,13 @@ public class UserController {
 		response.put("data", userService.findByEmail(email));
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
+
+	@GetMapping("/users/search/{email}/{password}")
+	public ResponseEntity<Map<String, Object>> getUserByEmailAndPassword(@PathVariable String email,
+			@PathVariable String password) {
+		Map<String, Object> response = new LinkedHashMap<String, Object>();
+		response.put("status", HttpStatus.OK.value());
+		response.put("data", userService.findByEmailAndPassword(email, password));
+		return ResponseEntity.status(HttpStatus.OK).body(response);
+	}
 }

@@ -62,6 +62,7 @@ public class SpringSecurityConfig {
 			// Specify the login page and permit all access to it
 		}).formLogin(form -> {
 			form.loginProcessingUrl("/api/login");
+//			form.loginPage("");
 			form.defaultSuccessUrl("/api/users");
 			form.permitAll();
 		}).logout(logout -> logout.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll())

@@ -132,6 +132,16 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public boolean findByEmailAndPassword(String email, String password) {
+		User user = userRepository.findByEmail(email);
+        if (user == null) {
+            return false;
+        }
+        return passwordEncoder.matches(password, user.getPassword());
+       
+	}
+
+	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = userRepository.findByEmail(username);
 		if (user == null) {
@@ -142,4 +152,5 @@ public class UserServiceImpl implements UserService {
 						.collect(Collectors.toList()));
 
 	}
+
 }
